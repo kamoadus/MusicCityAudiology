@@ -8,7 +8,7 @@ namespace api.models
     public class ReadMCAData
     {
          private readonly string cs;
-        public ReadMovieData(){
+        public ReadMCAData(){
             string server = "lyl3nln24eqcxxot.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
             string database = "psmjh2r64v4natx5";
             string port = "3306";
