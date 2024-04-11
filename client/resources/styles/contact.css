@@ -3,7 +3,7 @@
     padding-bottom: 50px;
      background-color: #1b83df;
  }
- 
+
  .pageTitle{
     color: white;
     font-style: initial;
@@ -25,4 +25,39 @@
     font-size: 20px;
     margin-left: 10px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.footer{
+    background-color: #1b83df;
+   margin-top: 150px;
+   padding-top: 25px;
+   padding-bottom: 25px;
+   color: white;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.instagramLogo{
+    width: 20px;
+    height: 20px;
+}
+
+.linkedInLogo{
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
+.facebookLogo{
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.groove{
+    width: 200px;
+    height: 150px;
+}
+
+.drummers{
+    width: 200px;
+    height: 100px;
 }
