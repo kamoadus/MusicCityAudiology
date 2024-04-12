@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\carte\\OneDrive\\Desktop\\cmder stuff\\MusicCityAudiology\\api\\api.csproj": {}
+    "/Users/kaitie/MIS321/MusicCityAudiology/api/api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\carte\\OneDrive\\Desktop\\cmder stuff\\MusicCityAudiology\\api\\api.csproj": {
+    "/Users/kaitie/MIS321/MusicCityAudiology/api/api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\carte\\OneDrive\\Desktop\\cmder stuff\\MusicCityAudiology\\api\\api.csproj",
+        "projectUniqueName": "/Users/kaitie/MIS321/MusicCityAudiology/api/api.csproj",
         "projectName": "api",
-        "projectPath": "C:\\Users\\carte\\OneDrive\\Desktop\\cmder stuff\\MusicCityAudiology\\api\\api.csproj",
-        "packagesPath": "C:\\Users\\carte\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\carte\\OneDrive\\Desktop\\cmder stuff\\MusicCityAudiology\\api\\obj\\",
+        "projectPath": "/Users/kaitie/MIS321/MusicCityAudiology/api/api.csproj",
+        "packagesPath": "/Users/kaitie/.nuget/packages/",
+        "outputPath": "/Users/kaitie/MIS321/MusicCityAudiology/api/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\carte\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/kaitie/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -70,7 +70,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.405\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.403/RuntimeIdentifierGraph.json"
         }
       }
     }
