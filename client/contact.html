@@ -40,8 +40,11 @@
       <div class="row mt-5">
         <div class="col-md-6">
       <div class="container">
-        <form action="action_page.php">
-      
+        <form action="https://api.web3forms.com/submit" method="POST" class = "contact-left">
+            <div class = "contact-left-title">
+              <h2>Get in Touch</h2>
+              </div>
+              <input type="hidden" name="access_key" value="d8e1a14a-cdf1-41f8-8cd7-2fba4e9aa17a">
           <label for="fname" class="headers"><strong>First Name</strong></label>
           <input type="text" id="fname" name="firstname" placeholder="Your name..">
       
@@ -54,8 +57,8 @@
           <label for="lname" class="headers"><strong>Phone Number</strong></label>
           <input type="text" id="phoneNum" name="phoneNum" placeholder="Your Phone Number..">
       
-          <label for="subject" class="headers"><strong>Subject</strong></label>
-          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+          <label for="message" class="headers"><strong>Message</strong></label>
+          <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
       
           <div class="text-center">
           <input type="submit" value="Submit">
