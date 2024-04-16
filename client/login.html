@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <title>Make An Appointment</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <link rel="stylesheet" href="./resources/styles/contact.css">
+    <link rel="stylesheet" href="./resources/styles/login.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-sm">
@@ -25,49 +25,39 @@
                             <a class="nav-link" href="./faq.html">FAQ's</a>
                         </li>
                         <li class="nav-item">
-                            <a class="aptButton" href="./apt.html" onclick="makeAnAppointment()">Login/Make an Appointment</a>
+                            <a class="aptButton" href="./login.html" onclick="makeAnAppointment()">Login/Make an Appointment</a>
                         </li>
                     </ul>
                  </div>
             </div>
       </nav>
-      <div class="container">
-        <div class="pageHeading">
-            <font><strong>Let Me Know How I can Help You!</strong></font>
-        </div>
-      </div>
-      </div>
-      <div class="row mt-5">
-        <div class="col-md-6">
-      <div class="container">
-        <form action="action_page.php">
-      
-          <label for="fname" class="headers"><strong>First Name</strong></label>
-          <input type="text" id="fname" name="firstname" placeholder="Your name..">
-      
-          <label for="lname" class="headers"><strong>Last Name</strong></label>
-          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-      
-          <label for="lname" class="headers"><strong>Email</strong></label>
-          <input type="text" id="email" name="email" placeholder="Your email address..">
 
-          <label for="lname" class="headers"><strong>Phone Number</strong></label>
-          <input type="text" id="phoneNum" name="phoneNum" placeholder="Your Phone Number..">
-      
-          <label for="subject" class="headers"><strong>Subject</strong></label>
-          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-      
-          <div class="text-center">
-          <input type="submit" value="Submit">
-        </div>
-      
-        </form>
-      </div>
+  <div class="contianer">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-6">
+    <form action="action_page.php" id="myForm">
+      <label for="lname" class="headers"><strong>Email</strong></label>
+      <input type="text" id="email" name="Email" required placeholder="Your email address..">
+
+      <label for="password" class="headers"><strong>Password</strong></label>
+      <input type="password" id="password" name="Phone Number" required placeholder="Your Password..">
+  
+      <div class="text-center">
+        <form action="appointment.html">
+      <input type="submit" value="Submit">
+    </form>
     </div>
-    <div class="col-md-6">
-        <img src="https://images.squarespace-cdn.com/content/v1/642aec7f77f09359b9cfd820/b43d686c-92cc-4418-a25b-fc024133bddc/Jason.jpeg?format=1500w" alt="Dr. Jason Baker img" class="img-fluid">
+    </form>
     </div>
     </div>
+
+
+<div class="row justify-content-center mt-3">
+    <div class="col-md-6 text-center">
+        <a href="makeAnAccount.html" class="custom-button">Don't have an account? Make one Here!</a>
+    </div>
+</div>
+</div>
 
       <footer class="footer">
         <div class="container-fluid">
@@ -87,6 +77,6 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-    <script src="./resources/scripts/contact.js"></script>
+    <script src="./resources/scripts/login.js"></script>
 </body>
 </html>

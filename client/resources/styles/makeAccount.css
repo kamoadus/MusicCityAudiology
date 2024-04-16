@@ -1,0 +1,130 @@
+.navbar{
+    padding-top: 50px;
+    padding-bottom: 50px;
+     background-color: #1b83df;
+ }
+
+ .pageTitle{
+    color: white;
+    font-style: initial;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.navbar-nav .nav-link{
+    color: white;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.aptButton {
+    background-color: white;
+    color: #1b83df;
+    border-radius: 10px;
+    border-color: white;
+    padding: 10px 15px;
+    font-size: 20px;
+    margin-left: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.footer{
+    background-color: #1b83df;
+   margin-top: 150px;
+   padding-top: 25px;
+   padding-bottom: 25px;
+   margin-bottom: 0;
+   color: white;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.instagramLogo{
+    width: 20px;
+    height: 20px;
+}
+
+.linkedInLogo{
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
+.facebookLogo{
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.groove{
+    width: 200px;
+    height: 150px;
+}
+
+.drummers{
+    width: 200px;
+    height: 100px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+input[type=text], select, textarea {
+    width: 100%; 
+    padding: 12px; 
+    border: 1px solid #ccc;
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    margin-left: 20px;
+    resize: vertical 
+  }
+
+  input[type=password] {
+    width: 100%; 
+    padding: 12px;
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px;
+    margin-left: 20px; 
+    resize: vertical; 
+}
+
+input[type=password]:focus {
+    outline: none; 
+    border-color: #1b83df;
+}
+
+input[type=password]:hover {
+    border-color: #0b3962; 
+}
+
+  
+  input[type=submit] {
+    background-color: #1b83df;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: larger;
+  }
+
+  input[type=submit]:hover {
+    background-color: #0b3962;
+  }
+
+  .headers{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: larger;
+    margin-left: 20px;
+  }
+
+  .text-center{
+    text-align: center;
+  }
