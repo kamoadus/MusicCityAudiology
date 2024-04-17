@@ -32,6 +32,56 @@
             </div>
       </nav>
 
+      <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <form action="action_page.php" id="form1">
+                    <label for="location" class="headers"><strong>What Location would you like your service done?</strong></label>
+                    <select id="location" name="Location" placeholder="Select your location..." onchange="toggleOtherLocationInput(this)">
+                        <option value="value1">Value 1</option>
+                        <option value="value2">Value 2</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <div id="otherLocation" style="display: none;">
+                        <label for="otherLocationInput" class="headers"><strong>Other Location</strong></label>
+                        <input type="text" id="otherLocationInput" name="otherLocation" placeholder="Enter other location...">
+                    </div>
+                </form>
+            </div>
+    
+            <div class="col-md-4">
+                <form action="action_page.php" id="form2">
+                    <label for="treatment" class="headers"><strong>What Treatment would you like done?</strong></label>
+                    <select id="treatment" name="Treatment" placeholder="Select your treatment...">
+                        <option value="hearingAids">Hearing Aids</option>
+                        <option value="earmoldImpressions">Earmold Impressions</option>
+                        <option value="customHearingProtection">Custom Hearing Protection</option>
+                        <option value="earCanalCleaning">Ear Canal Cleaning</option>
+                        <option value="deviceCleaningAndTroubleshooting">Device Cleaning and Troubleshooting</option>
+                        <option value="audiologyConsults">Audiology Consults</option>
+                    </select>
+                </form>
+            </div>
+    
+            <div class="col-md-4">
+                <form action="action_page.php" id="form3">
+                    <label for="payment" class="headers"><strong>What payment method would you like to use?</strong></label>
+                    <select id="payment" name="Payment" placeholder="Select your method..." onchange="toggleOtherPaymentInput(this)">
+                        <option value="wireTransfer">Wire Transfer</option>
+                        <option value="electronicPay">Electronic Pay</option>
+                        <option value="inPerson">Pay in person</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <div id="otherPayment" style="display: none;">
+                        <label for="otherPaymentInput" class="headers"><strong>Other Payment</strong></label>
+                        <input type="text" id="otherPaymentInput" name="otherPayment" placeholder="Enter other payment...">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
       <footer class="footer">
         <div class="container-fluid">
             <div class="row">
@@ -50,6 +100,6 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-    <script src="./resources/scripts/apt.js"></script>
+    <script src="./resources/scripts/appointment.js"></script>
 </body>
 </html>
