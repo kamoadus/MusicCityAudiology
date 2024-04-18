@@ -25,7 +25,7 @@ namespace api.Controllers
  
         // GET: api/user/5
         [HttpGet("{id}", Name = "Get")]
-        public string Get(int UserID)
+        public string Get(int id)
         {
             return "value";
         }
@@ -34,6 +34,11 @@ namespace api.Controllers
         [HttpPost]
         public void Post([FromBody] UserInfo user_Info)
         {
+            // Hash the password before storing it
+            string hashedPassword = HashPassword(user_Info.Password);
+            user_Info.Password = hashedPassword;
+ 
+            // Save the user info to the database
             UserInfo utility = new UserInfo();
             utility.AddUser(user_Info);
         }
@@ -48,6 +53,12 @@ namespace api.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+        }
+ 
+        // Method to hash a password
+        private string HashPassword(string password)
+        {
+            return BCrypt.Net.BCrypt.HashPassword(password);
         }
     }
 }
