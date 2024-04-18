@@ -246,3 +246,5 @@
 /Users/kaitie/MIS321/MusicCityAudiology/api/obj/Debug/net7.0/api.pdb
 /Users/kaitie/MIS321/MusicCityAudiology/api/obj/Debug/net7.0/api.genruntimeconfig.cache
 /Users/kaitie/MIS321/MusicCityAudiology/api/obj/Debug/net7.0/ref/api.dll
+/Users/kaitie/MIS321/MusicCityAudiology/api/bin/Debug/net7.0/Google.Protobuf.dll
+/Users/kaitie/MIS321/MusicCityAudiology/api/bin/Debug/net7.0/MySql.Data.dll

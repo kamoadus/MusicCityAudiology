@@ -33,7 +33,6 @@ app.UseAuthorization();
 
 app.UseCors("OpenPolicy");
 
-
 app.MapControllers();
 
 app.Run();

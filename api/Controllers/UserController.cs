@@ -4,40 +4,47 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Data;
+using MySql.Data;
+using MySql.Data.MySqlClient;
+using api.models;
+
 
 namespace api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class MCAController : ControllerBase
+    public class userController : ControllerBase
     {
-        // GET: api/MCA
+        // GET: api/user
         [HttpGet]
-        public IEnumerable<string> Get()
+        public List<UserInfo> Get()
         {
-            return new string[] { "value1", "value2" };
+            return UserInfo.GetAllUserInfo();
         }
-
-        // GET: api/MCA/5
+ 
+        // GET: api/user/5
         [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
+        public string Get(int UserID)
         {
             return "value";
         }
-
-        // POST: api/MCA
+ 
+        // POST: api/user
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] UserInfo user_Info)
         {
+            UserInfo utility = new UserInfo();
+            utility.AddUser(user_Info);
         }
-
-        // PUT: api/MCA/5
+ 
+        // PUT: api/user/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
         }
-
-        // DELETE: api/MCA/5
+ 
+        // DELETE: api/user/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
