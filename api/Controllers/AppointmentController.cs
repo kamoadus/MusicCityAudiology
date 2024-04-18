@@ -2,30 +2,26 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using api.models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System.Data;
-using MySql.Data;
-using MySql.Data.MySqlClient;
-using api.models;
-
+ 
 namespace api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class appointmentController : ControllerBase
+    public class AppointmentController : ControllerBase
     {
         // GET: api/appointment
         [HttpGet]
         public List<Appointment> Get()
         {
-            
             return Appointment.GetAllAppointments();
         }
  
-        // GET: api/appointment/5
+        // // GET: api/appointment/5
         // [HttpGet("{id}", Name = "Get")]
-        // public string Get(int ApptID)
+        // public string Get(int id)
         // {
         //     //select * from appt where userid = userid
         //     return "value";
@@ -60,4 +56,3 @@ namespace api.Controllers
         }
     }
 }
- 

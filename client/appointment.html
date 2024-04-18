@@ -33,19 +33,48 @@
       </nav>
       <div class="container">
         <div class="pageHeading">
-            <font><strong>Make an Appointment with Me!</strong></font>
+            <font><strong>Make an Appointment</strong></font>
         </div>
       </div>
       </div>
-      <div class="center">
-        <div class="iframe-container">
-        <iframe id="googleForms" src="https://docs.google.com/forms/d/e/1FAIpQLSeu447ULDQE3X4pZeq1iN3gnPWlrydPdZtLaBEe91ryonAQ8Q/viewform?embedded=true" width="640" height="1050" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-    </div>
-    <div class="iframe-container">
-        <iframe src="https://calendar.google.com/calendar/embed?src=anonmca13%40gmail.com&ctz=America%2FNew_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-    </div>
-    </div>
-    
+
+    <form id="appointmentForm" action="/api/appointment" method="POST">
+        <div>
+            <label for="location">Location:</label>
+            <select id="location" name="location">
+                <option value="">Select Location</option>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="other">Other</option>
+            </select>
+            <input type="text" id="otherLocationInput" name="otherLocation" style="display: none;" placeholder="Other location">
+        </div>
+        <div>
+            <label for="service">Service Provided:</label>
+            <select id="service" name="service">
+                <option value="">Select the service you want preformed</option>
+                <option value="option1">Hearing Aids</option>
+                <option value="option2">Earmold Impressions</option>
+                <option value="option2">Custom Hearing Protection</option>
+                <option value="option2">Ear Canal Cleaning</option>
+                <option value="option2">Device Cleaning & Troubleshooting</option>
+                <option value="option2">Audiology Consults</option>
+            </select>
+        </div>
+        <div>
+            <label for="payment">Payment Method:</label>
+            <select id="payment" name="payment">
+                <option value="">Select Payment Method</option>
+                <option value="option1">Wire Transfer</option>
+                <option value="option2">Electronic Pay</option>
+                <option value="other">Other</option>
+            </select>
+            <input type="text" id="otherPaymentInput" name="otherPayment" style="display: none;" placeholder="Other payment method">
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+
+    <div class="calendar"></div>
 
       <footer class="footer">
         <div class="container-fluid">

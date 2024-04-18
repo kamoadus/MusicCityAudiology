@@ -2,14 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using api.models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System.Data;
-using MySql.Data;
-using MySql.Data.MySqlClient;
-using api.models;
-
-
+ 
 namespace api.Controllers
 {
     [Route("api/[controller]")]
@@ -34,11 +30,6 @@ namespace api.Controllers
         [HttpPost]
         public void Post([FromBody] UserInfo user_Info)
         {
-            // Hash the password before storing it
-            string hashedPassword = HashPassword(user_Info.Password);
-            user_Info.Password = hashedPassword;
- 
-            // Save the user info to the database
             UserInfo utility = new UserInfo();
             utility.AddUser(user_Info);
         }
@@ -53,12 +44,6 @@ namespace api.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-        }
- 
-        // Method to hash a password
-        private string HashPassword(string password)
-        {
-            return BCrypt.Net.BCrypt.HashPassword(password);
         }
     }
 }

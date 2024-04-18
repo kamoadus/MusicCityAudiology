@@ -1,12 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Data;
-using MySql.Data;
 using MySql.Data.MySqlClient;
 using api.database;
-
 
 namespace api.models
 {
@@ -38,8 +31,9 @@ namespace api.models
         {
             Database database = new Database();
             using var con = database.GetPublicConnection();
-            string stm = @"Insert into MCA (Username, Password, Fname, Lname)";
+            string stm = @"Insert into User_Info (Username, Password, Fname, Lname) VALUES(@Username, @Password, @Fname, @Lname)";
             MySqlCommand cmd = new MySqlCommand(stm, con);
+            con.Open();
             cmd.Parameters.AddWithValue("@Username", UserInfo.Username);
             cmd.Parameters.AddWithValue("@Password", UserInfo.Password);
             cmd.Parameters.AddWithValue("@FName", UserInfo.Fname);
