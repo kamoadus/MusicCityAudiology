@@ -129,3 +129,22 @@ input[type=password]:hover {
     text-align: center;
   }
 
+  .pageHeading{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+    font-size: 60px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+}
+
+.iframe-container {
+    margin-top: 0;
+    margin-bottom: 5px; 
+}
