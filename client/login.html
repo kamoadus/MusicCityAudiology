@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Make An Appointment</title>
+    <title>Login</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="./resources/styles/login.css">
 </head>
@@ -35,12 +35,12 @@
   <div class="contianer">
     <div class="row justify-content-center mt-5">
         <div class="col-md-6">
-    <form action="action_page.php" id="myForm">
-      <label for="lname" class="headers"><strong>Email</strong></label>
+    <form id="myForm" onsubmit="submitForm(event)">
+      <label for="email" class="headers"><strong>Email</strong></label>
       <input type="text" id="email" name="Email" required placeholder="Your email address..">
 
       <label for="password" class="headers"><strong>Password</strong></label>
-      <input type="password" id="password" name="Phone Number" required placeholder="Your Password..">
+      <input type="password" id="password" name="Password" required placeholder="Your Password..">
   
       <div class="text-center">
         <form action="appointment.html">
