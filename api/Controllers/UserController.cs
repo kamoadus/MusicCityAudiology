@@ -13,18 +13,18 @@ namespace api.Controllers
     public class userController : ControllerBase
     {
         // GET: api/user
-        [HttpGet]
-        public List<UserInfo> Get()
+        [HttpGet("{username}/{password}")]
+        public int Get(string username, string password)
         {
-            return UserInfo.GetAllUserInfo();
+            return UserInfo.GetUserInfo(username, password);
         }
  
         // GET: api/user/5
-        [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
-        {
-            return "value";
-        }
+        // [HttpGet("{id}", Name = "Get")]
+        // public string Get(int id)
+        // {
+        //     return "value";
+        // }
  
         // POST: api/user
         [HttpPost]

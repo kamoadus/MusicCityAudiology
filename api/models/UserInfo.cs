@@ -1,5 +1,6 @@
 using MySql.Data.MySqlClient;
 using api.database;
+using Microsoft.Extensions.Configuration.UserSecrets;
 
 namespace api.models
 {
@@ -10,22 +11,31 @@ namespace api.models
         public string Password { get; set;}
         public string Fname { get; set;}
         public string Lname { get; set;}
-        public static List<UserInfo> GetAllUserInfo()
+        public static int GetUserInfo(string username, string password)
         {
-            List<UserInfo> UserInfo = new List <UserInfo>();
+            int userId = 0;
+
+            //List<UserInfo> UserInfo = new List <UserInfo>();
             Database database = new Database();
             using var con = database.GetPublicConnection();
  
-            string stm = "Select * from User_Info";
+            string stm = "Select userID from User_Info where username = @username and password = @password";
             MySqlCommand cmd = new MySqlCommand(stm, con);
             con.Open();
+
+            cmd.Parameters.AddWithValue("@username", username);
+            cmd.Parameters.AddWithValue("@password", password);
+            cmd.Prepare();
+            
             MySqlDataReader rdr = cmd.ExecuteReader();
-            while (rdr.Read())
+            while(rdr.Read())
             {
-                UserInfo.Add (new UserInfo(){UserID=rdr.GetInt32(0), Username=rdr.GetString(1), Password=rdr.GetString(2), Fname=rdr.GetString(3), Lname=rdr.GetString(4)});
+                userId = rdr.GetInt32(0);
+                System.Console.WriteLine(userId);
+                // UserInfo.Add (new UserInfo(){UserID=rdr.GetInt32(0), Username=rdr.GetString(1), Password=rdr.GetString(2), Fname=rdr.GetString(3), Lname=rdr.GetString(4)});
             }
-            con.Close();
-            return UserInfo;
+            System.Console.WriteLine(userId);
+            return userId;
         }
         public void AddUser(UserInfo UserInfo)
         {
@@ -36,7 +46,7 @@ namespace api.models
             con.Open();
             cmd.Parameters.AddWithValue("@Username", UserInfo.Username);
             cmd.Parameters.AddWithValue("@Password", UserInfo.Password);
-            cmd.Parameters.AddWithValue("@FName", UserInfo.Fname);
+            cmd.Parameters.AddWithValue("@Fname", UserInfo.Fname);
             cmd.Parameters.AddWithValue("@Lname", UserInfo.Lname);
  
             cmd.Prepare();

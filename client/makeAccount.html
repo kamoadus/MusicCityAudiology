@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Make An account</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <link rel="stylesheet" href="./resources/styles/makeAnAccount.css">
+    <link rel="stylesheet" href="./resources/styles/makeAccount.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-sm">
@@ -35,19 +35,19 @@
       <div class="contianer">
         <div class="row justify-content-center mt-5">
             <div class="col-md-6">
-        <form action="action_page.php" id="myForm">
+        <form action="api/UserInfo" method="post" id="myForm">
 
         <label for="fname" class="headers"><strong>First Name</strong></label>
-        <input type="text" id="fname" name="First Name" required placeholder="Your name..">
+        <input type="text" id="Fname" name="First Name" required placeholder="Your name..">
 
         <label for="lname" class="headers"><strong>Last Name</strong></label>
-        <input type="text" id="lname" name="Last Name" required placeholder="Your last name..">
+        <input type="text" id="Lname" name="Last Name" required placeholder="Your last name..">
 
           <label for="lname" class="headers"><strong>Email</strong></label>
-          <input type="text" id="email" name="Email" required placeholder="Your email address..">
+          <input type="text" id="Username" name="Email" required placeholder="Your email address..">
     
           <label for="password" class="headers"><strong>Password</strong></label>
-          <input type="password" id="password" name="password" required placeholder="Your Password..">
+          <input type="password" id="Password" name="password" required placeholder="Your Password..">
 
           <label for="confirmPassword" class="headers"><strong>Confirm Password</strong></label>
           <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Confirm Password.." pattern=".{6,}" title="Password must be at least 6 characters long" oninput="checkPasswordsMatch()">
@@ -85,6 +85,6 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-    <script src="./resources/scripts/makeAnAccount.js"></script>
+    <script src="./resources/scripts/makeAccount.js"></script>
 </body>
 </html>

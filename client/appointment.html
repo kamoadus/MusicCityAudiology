@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Make An Appointment</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link  rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css"/>
     <link rel="stylesheet" href="./resources/styles/appointment.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-sm">
@@ -38,8 +42,9 @@
       </div>
       </div>
 
-    <form id="appointmentForm" action="/api/appointment" method="POST">
+      <form id="appointmentForm" action="/api/appointment" method="POST">
         <div>
+            <input type="hidden" id="UserID" name="UserID">
             <label for="location">Location:</label>
             <select id="location" name="location">
                 <option value="">Select Location</option>
@@ -50,16 +55,34 @@
             <input type="text" id="otherLocationInput" name="otherLocation" style="display: none;" placeholder="Other location">
         </div>
         <div>
-            <label for="service">Service Provided:</label>
-            <select id="service" name="service">
-                <option value="">Select the service you want preformed</option>
-                <option value="option1">Hearing Aids</option>
-                <option value="option2">Earmold Impressions</option>
-                <option value="option2">Custom Hearing Protection</option>
-                <option value="option2">Ear Canal Cleaning</option>
-                <option value="option2">Device Cleaning & Troubleshooting</option>
-                <option value="option2">Audiology Consults</option>
-            </select>
+            <label>Service Provided:</label>
+                <div class="checkbox-buttons">
+                    <input type="checkbox" id="service-option1" name="service-option1" value="option1">
+                    <label for="service-option1">Hearing Aids</label>
+                    
+                    <input type="checkbox" id="service-option2" name="service-option2" value="option2">
+                    <label for="service-option2">Earmold Impressions</label>
+                    
+                    <input type="checkbox" id="service-option3" name="service-option3" value="option3">
+                    <label for="service-option3">Custom Hearing Protection</label>
+                    
+                    <input type="checkbox" id="service-option4" name="service-option4" value="option4">
+                    <label for="service-option4">Ear Canal Cleaning</label>
+                    
+                    <input type="checkbox" id="service-option5" name="service-option5" value="option5">
+                    <label for="service-option5">Device Cleaning & Troubleshooting</label>
+                    
+                    <input type="checkbox" id="service-option6" name="service-option6" value="option6">
+                    <label for="service-option6">Audiology Consults</label>
+                </div>
+        </div>
+        <div>
+            <h3>Appointment Date:</h3>
+            <div id="inlineDate"></div>
+        </div>
+        <div>
+            <h3>Appointment Time:</h3>
+            <div id="inlineTime"></div>
         </div>
         <div>
             <label for="payment">Payment Method:</label>
@@ -74,7 +97,9 @@
         <button type="submit">Submit</button>
     </form>
 
-    <div class="calendar"></div>
+    
+
+    
 
       <footer class="footer">
         <div class="container-fluid">
@@ -94,6 +119,8 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js"></script>
+</script>
     <script src="./resources/scripts/appointment.js"></script>
 </body>
 </html>

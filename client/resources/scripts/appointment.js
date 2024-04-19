@@ -1,42 +1,43 @@
-function fetchAppointments(startDate, endDate) {
-    fetch(`api/appointment/range?startDate=${startDate.toISOString()}&endDate=${endDate.toISOString()}`)
-        .then(response => response.json())
-        .then(data => {
-            renderCalendar(data);
-        })
-        .catch(error => console.error('Error fetching appointments:', error));
-}
+$(document).ready(function() {
+    var today = new Date();
+    $('#inlineDate').datetimepicker({
+        inline: true,
+        format: 'Y-m-d',
+        timepicker: false,
+        minDate: today
+    });
+    $('#inlineTime').datetimepicker({
+        inline: true,
+        format: 'H:i',
+        datepicker: false
+    });
+});
 
-function renderCalendar(appointments) {
-    const calendarDiv = document.getElementById('calendar');
-    const calendarHTML = [];
-
-    calendarHTML.push('<table>');
-    calendarHTML.push('<tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr>');
-    
-    // Loop through each day of the month
-    let currentDate = new Date(startDate);
-    while (currentDate <= endDate) {
-        calendarHTML.push('<tr>');
-        for (let i = 0; i < 7; i++) {
-            if (currentDate.getMonth() == startDate.getMonth()) {
-                const day = currentDate.getDate();
-                const isAppointmentDay = appointments.some(appointment => new Date(appointment.ApptDate).getDate() === day);
-
-                if (isAppointmentDay) {
-                    calendarHTML.push(`<td class="appointment">${day}</td>`);
-                } else {
-                    calendarHTML.push(`<td>${day}</td>`);
-                }
-            } else {
-                calendarHTML.push('<td></td>');
-            }
-            currentDate.setDate(currentDate.getDate() + 1);
-        }
-        calendarHTML.push('</tr>');
+document.addEventListener("DOMContentLoaded", function() {
+    var userId = localStorage.getItem("userId");
+    if (userId) {
+        document.getElementById("UserID").value = userId;
     }
+});
 
-    calendarHTML.push('</table>');
+function handleSubmit(event) {
+    event.preventDefault();
 
-    calendarDiv.innerHTML = calendarHTML.join('');
+    var formData = new FormData(document.getElementById("appointmentForm"));
+
+    fetch('/api/appointment', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        console.log('Appointment submitted successfully');
+    })
+    .catch(error => {
+        console.error('There was a problem submitting the appointment:', error);
+    });
 }
+
+document.getElementById("appointmentForm").addEventListener("submit", handleSubmit);
