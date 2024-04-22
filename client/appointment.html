@@ -12,14 +12,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js"></script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-sm">
+    <nav class="navbar navbar-expand-md navbar-light bg-primary fixed-top" id="navbar">
         <div class="container-fluid">
             <div class="pageTitle">
                     <h2><strong>Music City Audiology</strong></h2>
                 </div>
-                <div class="navbar-collapse justify-content-end">
-                    <ul class="navbar-nav">
-                        <li class="nav-item active">
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse justify-content-end collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav m1-auto">
+                        <li class="nav-item">
                             <a class="nav-link" href="./homePage.html">Home</a>
                         </li>
                         <li class="nav-item">
@@ -29,7 +33,7 @@
                             <a class="nav-link" href="./faq.html">FAQ's</a>
                         </li>
                         <li class="nav-item">
-                            <a class="aptButton" href="./login.html" onclick="makeAnAppointment()">Login/Make an Appointment</a>
+                            <a class="aptButton d-sm-block d-md-inline" href="./login.html" onclick="makeAnAppointment()">Login/Make an Appointment</a>
                         </li>
                     </ul>
                  </div>
@@ -101,18 +105,21 @@
 
     
 
-      <footer class="footer">
+    <footer class="footer bg-primary">
         <div class="container-fluid">
-            <div class="row">
-                <div class="col align-self-center">
-                    <h1>Music City Audiology</h1>
-                    <a href="https://www.instagram.com/musiccityaudiology/?igshid=YmMyMTA2M2Y%3D" target="_blank"><img src="https://www.kortegaard.co.uk/wp-content/uploads/2020/06/best-solutions-of-instagram-png-transparent-png-images-unique-white-instagram-logo-outline-of-white-instagram-logo-outline-copy.png" alt="Instagram Link" class="instagramLogo"></a>
-                    <a href="https://www.linkedin.com/in/jason-baker-audiology/" target="_blank"><img src="https://www.pagetraffic.com/blog/wp-content/uploads/2022/09/white-linkedin-logo.png" alt="LinkedIn Link" class="linkedInLogo"></a>
-                    <a href="https://www.facebook.com/musiccityaudiology" target="_blank"><img src="https://www.pngall.com/wp-content/uploads/13/Facebook-White-Logo.png" alt="Facebook logo" class="facebookLogo"></a>
+            <div class="row align-items-center">
+                <div class="col-md-auto">
+                    <h1 class="text-white">Music City Audiology</h1>
+                    <div class="d-flex justify-content-center justify-content-md-start">
+                        <a href="https://www.instagram.com/musiccityaudiology/?igshid=YmMyMTA2M2Y%3D" target="_blank" class="mr-3"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAr1JREFUaEPtmTtSHDEQhvVrjsBBHBN5ibmBy4EPQObEkQ3lwBkJZ3CVb+ElI+Ea9gUc7qhNjzVbQujRrXngrRoSoHak6e/vVnerF+bEf3Di9psN4LU9uHngJD1ARDvn3A7AWw+wawUhohtea63dA9hr91GFUN/31wC+aF+ieZ6Buq67lq4RAbDiRMSGNystNWh8TgpSBcioPriaiO7Z9Vrjxuc5DPlvH4ovxAFwUQurKoBzjkIDpcq0QCXE2ltrL0p7FQHiDSWKtBgeCcTh+lMaSkWAUP0llCeiM+fcBwCXRPRorb0B8EcjXBbAH9xRiaorW5QnoqsniLtxLYBbAB/5/1C8kuezAKEKreqzCP6QJg963/ffAHwK4B+stecegMUb1pfePzuAB+cC9yKrxIYcDod31trvQbx/7rruawzwtFc2ArIAUheOL9cUuRCEiN4bY94YY34ZY34A+O1VDw/zsgAa46XZJTqD3GokxZ7sgVyhA8AZZSx4Y+/0rA0pxfZqAHGhK2WMFGxO2VUAYoMk2So2LLdmVoCcSq2Fzjl3TJG5DLM6gKbNkBgneWaoMbkKGqqb8oD0BZL9U/DS/TeAoI+p9u5BDXjWcU7xcLMHNOU+DqM4ey0OkDugmrY313KskkZLGUZzY4sPJkO9aiFjA1LVlVUNxyS5ocB/0UrkIGoXnFrVniONHqulpEhpOtKa8SlRWrpR0Y2olmGCz/c8hpEOrSJB9PcB6QalUKldKUtrw36p6Uq5xqW+AnCcR80BULxY1w6s9nNJoTt2AKXNWwqV1tj4eel9QQSQaBcW9YTmxiYGSFVPPzUY5vq+mk4a8Oa+Z5Ck2+pwt7VQTQ0lSe3hd4gAco3YVCMz61VjTBVACDLQ//uKaeqXHkP48RjG/1aFYxPAQso3bbsBNMk246LNAzOK2bTVyXvgL/g8t0/ke5xPAAAAAElFTkSuQmCC" alt="Instagram Link" class="instagramLogo"></a>
+                        <a href="https://www.linkedin.com/in/jason-baker-audiology/" target="_blank" class="mr-3"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAfJJREFUaEPtmU9Kw0AUxt836VIQ3XgFBXElbtteRLdWxBtoW9BNQXCjB9B7aF2LCxEvIoK6yHx2wJY0ZjJpLZOkTHaBmb7v9/6HQmr+oOb6JQCUHcHljgDJFRHZjuN4S0QYRdGbiLwC+Crb82P71giQXNdadwGcJMUCGIzeewA+qwCRCUByVWt9DuA4SyTJgVLqDMB32RA2gCbJYZ44ALsAnqsK0CF54wDYB3BXVYAjktd54rTWB41G47aqAG2S944I7AF4qiqA6UAXAA6zBAK4FJHTKnSivDa68dtGO0kIkldKKdNe38v2vrGfO4lJronIjohsmkEmImaQvQD4qIJ4J0BVRObWYh1EzgUwGmQtRxeaGnSznDdntdYtAM1UfT2a9yiKekUda60BrfWDiNgghkqpdtJIHMdmP+paDE/OO353cp1kvwiIV4Ci4scURSC8AfyKyk1Ly8xpA7DuZb4AiqZ01rk/6Zo8VAcAAWCNQpkAJi0KpVReLfgGGALoJ3Pa0b3G2WJNI68ASqlMewUgygdwtcTR4mh2Letjg/cWgbxCNKpdM6J0AJuAsctdaRQAUsk56y4kIQKWDuatiEMEQgSmqzgUcXrkhjmQ9siCv4nDHAirRO1Wif98hfu8u9x/s/r05Ly2QgTm9dyi7tU+Aj8CvbVAqB8hPQAAAABJRU5ErkJggg==" alt="LinkedIn Link" class="linkedInLogo"></a>
+                        <a href="https://www.facebook.com/musiccityaudiology" target="_blank"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAThJREFUaEPtV9EOgjAM3JUPU79M+DLxw1jNDCYEYWwr6oi3pyWs0LvedQXu4AsHz98RwK8ryAr8RQWGYWgBnEaw5wnoPuwBdACe+9z1UQmNiV+3kgJwqQ6A9/7mnJuyvYqjOgCpzL8QVQfAe69bspk+rwqAqp5VNcgneVUFICYfVe1EpC817BIju3ehmHktTK+V85sAehG5JOsq8SABzImKSIgV+LWJ66rA2O+X5pzY+LA4sFnMXWzikgtrrbGISHEexYE7AjBJiwAS75vYsWNXIMxHTdO0pUQUSyh8MAxu8w8DWPsD61X1Pj9vHe5MAJZY402cqSVWgMNcpmTemoYx/i2cJs5klCamiTMlQxNvEcYutMXQ7Dm7ELtQpmQ+3oWM+WSH7+6B7AyMAQRgJNAczgqYKTS+4AEbENUxFtEKagAAAABJRU5ErkJggg==" alt="Facebook logo" class="facebookLogo"></a>
+                        
+                    </div>
                 </div>
-                <div class="col-4">
+                <div class="col-md-auto ml-md-auto">
                     <a href="https://www.garden-groove.com/" target="_blank"><img src="https://images.squarespace-cdn.com/content/v1/642aec7f77f09359b9cfd820/311143ca-2a98-449c-bd27-e5e430925c58/Garden+Groove+%2823%29.png?format=500w" class="groove"></a>
-                    <a href="https://nashvilledrummerspodcast.com/" target="_blank"><img src="https://images.squarespace-cdn.com/content/v1/642aec7f77f09359b9cfd820/28055378-545a-47a3-94b7-5dd756971e93/0.png?format=500w" class="drummers"></a>
+                    <a href="https://nashvilledrummerspodcast.com/" target="_blank" class="mr-3"><img src="https://images.squarespace-cdn.com/content/v1/642aec7f77f09359b9cfd820/28055378-545a-47a3-94b7-5dd756971e93/0.png?format=500w" class="drummers"></a>
                 </div>
             </div>
         </div>

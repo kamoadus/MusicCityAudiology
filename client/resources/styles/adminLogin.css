@@ -1,25 +1,19 @@
 .navbar{
     padding-top: 50px;
     padding-bottom: 50px;
-    background-color: #1b83df;
-    width: 100%; 
-    position: fixed; 
-    top: 0; 
-    z-index: 1000; 
+     background-color: #1b83df;
  }
 
-.pageTitle{
+ .pageTitle{
     color: white;
     font-style: initial;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.navbar-collapse .navbar-nav .nav-link {
-    color: white; 
-}
-
-.navbar-nav .nav-link:not(.aptButton) {
-    color: white; 
+.navbar-nav .nav-link{
+    color: white;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .aptButton {
@@ -27,9 +21,9 @@
     color: #1b83df;
     border-radius: 10px;
     border-color: white;
-    padding: 15px 15px;
-    font-size: 20px;
-    margin-left: 10px;
+    padding: 10px 15px;
+    font-size: 18px;
+    margin-left: px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -111,7 +105,7 @@ input[type=password]:hover {
 }
 
   
-input[type=submit] {
+  input[type=submit] {
     background-color: #1b83df;
     color: white;
     padding: 12px 20px;
@@ -119,21 +113,21 @@ input[type=submit] {
     border-radius: 4px;
     cursor: pointer;
     font-size: larger;
-}
+  }
 
-input[type=submit]:hover {
+  input[type=submit]:hover {
     background-color: #0b3962;
-}
+  }
 
-.headers{
+  .headers{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: larger;
     margin-left: 20px;
-}
+  }
 
-.text-center{
+  .text-center{
     text-align: center;
-}
+  }
 
   body {
     overflow-x: hidden; 
@@ -160,10 +154,6 @@ body::-webkit-scrollbar-thumb {
 
 body::-webkit-scrollbar-thumb:hover {
     background: #1b83df; 
-}
-
-.hidden {
-    display: none;
 }
 
 .top-padding{

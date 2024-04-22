@@ -1,3 +1,16 @@
+document.getElementById("adminLoginForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    
+    var email = document.getElementById("adminUsername").value;
+    var password = document.getElementById("adminPassword").value;
+
+    if (email === "admin1234" && password === "MCA1234") {
+        window.location.href = "admin.html"; 
+    } else {
+        alert("Invalid username or password. Please try again.");
+    }
+});
+
 var navbar = document.getElementById("navbar");
     var sticky = navbar.offsetTop;
 

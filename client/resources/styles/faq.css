@@ -1,19 +1,25 @@
 .navbar{
-    padding-top: 50px;
-    padding-bottom: 50px;
-    background-color: #1b83df;
- }
-
- .pageTitle{
-    color: white;
-    font-style: initial;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #1b83df;
+  width: 100%; 
+  position: fixed; 
+  top: 0; 
+  z-index: 1000; 
 }
 
-.navbar-nav .nav-link{
-    color: white;
-    font-size: 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.pageTitle{
+  color: white;
+  font-style: initial;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.navbar-collapse .navbar-nav .nav-link {
+  color: white; 
+}
+
+.navbar-nav .nav-link:not(.aptButton) {
+  color: white; 
 }
 
 .aptButton {
@@ -160,3 +166,37 @@ h2{
   margin-bottom: 15px;
 }
 
+body {
+  overflow-x: hidden; 
+  overflow-y: auto; 
+}
+
+body::-webkit-scrollbar {
+  width: 0; 
+}
+
+body:hover::-webkit-scrollbar {
+  width: 7px; 
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #1b83df; 
+  border-radius: 2px;
+  width: 7px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #1b83df; 
+}
+
+.hidden {
+  display: none;
+}
+
+.top-padding{
+  padding-top: 200px;
+}

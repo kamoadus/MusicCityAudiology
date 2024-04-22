@@ -1,25 +1,19 @@
 .navbar{
     padding-top: 50px;
     padding-bottom: 50px;
-    background-color: #1b83df;
-    width: 100%; 
-    position: fixed; 
-    top: 0; 
-    z-index: 1000; 
+     background-color: #1b83df;
  }
 
-.pageTitle{
+ .pageTitle{
     color: white;
     font-style: initial;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.navbar-collapse .navbar-nav .nav-link {
-    color: white; 
-}
-
-.navbar-nav .nav-link:not(.aptButton) {
-    color: white; 
+.navbar-nav .nav-link{
+    color: white;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .aptButton {
@@ -76,66 +70,7 @@
     height: 100vh;
 }
 
-
-input[type=text], select, textarea {
-    width: 100%; 
-    padding: 12px; 
-    border: 1px solid #ccc;
-    border-radius: 4px; 
-    box-sizing: border-box; 
-    margin-top: 6px; 
-    margin-bottom: 16px; 
-    margin-left: 20px;
-    resize: vertical 
-  }
-
-  input[type=password] {
-    width: 100%; 
-    padding: 12px;
-    border: 1px solid #ccc; 
-    border-radius: 4px; 
-    box-sizing: border-box; 
-    margin-top: 6px; 
-    margin-bottom: 16px;
-    margin-left: 20px; 
-    resize: vertical; 
-}
-
-input[type=password]:focus {
-    outline: none; 
-    border-color: #1b83df;
-}
-
-input[type=password]:hover {
-    border-color: #0b3962; 
-}
-
-  
-input[type=submit] {
-    background-color: #1b83df;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: larger;
-}
-
-input[type=submit]:hover {
-    background-color: #0b3962;
-}
-
-.headers{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: larger;
-    margin-left: 20px;
-}
-
-.text-center{
-    text-align: center;
-}
-
-  body {
+body {
     overflow-x: hidden; 
     overflow-y: auto; 
 }
@@ -160,10 +95,6 @@ body::-webkit-scrollbar-thumb {
 
 body::-webkit-scrollbar-thumb:hover {
     background: #1b83df; 
-}
-
-.hidden {
-    display: none;
 }
 
 .top-padding{
