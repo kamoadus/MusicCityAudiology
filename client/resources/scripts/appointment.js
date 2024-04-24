@@ -53,17 +53,27 @@ var navbar = document.getElementById("navbar");
         event.preventDefault();
     
         var formData = {
-            ApptLocation: document.getElementById("ApptLocation").value,
-            ApptTreatment: getCheckboxValues("ApptTreatment"),
-            PayMethod: document.getElementById("payment").value,
             UserID: document.getElementById("UserID").value,
+            PayMethod: document.getElementById("payment").value,
+            ApptLocation: document.getElementById("ApptLocation").value,
             ApptDate: document.getElementById("inlineDate").value,
-            ApptTime: document.getElementById("inlineTime").value,
+            ApptEndDate: document.getElementById("ApptEndDate").value,
+            HearingAids: document.getElementById("HearingAids").value,
+            EarmoldImpressions: document.getElementById("EarmoldImpressions").value,
+            CustomHearingProtection: document.getElementById("CustomHearingProtection").value,
+            EarCanalCleaning: document.getElementById("EarCanalCleaning").value,
+            AudiologyConsults: document.getElementById("AudiologyConsults").value,
+            DeviceCleaning: document.getElementById("DeviceCleaning").value,
         };
     
         console.log('Converted time:', formData.ApptTime);
     
-        var selectedServices = getCheckboxValues("ApptTreatment");
+        var selectedServices = getCheckboxValues("HearingAids");
+        var selectedServices = getCheckboxValues("EarmoldImpressions");
+        var selectedServices = getCheckboxValues("CustomHearingProtection");
+        var selectedServices = getCheckboxValues("EarCanalCleaning");
+        var selectedServices = getCheckboxValues("AudiologyConsults");
+        var selectedServices = getCheckboxValues("DeviceCleaning");
         var appointmentEndTime = calculateAppointmentEndTime(selectedServices);
     
         if (!isBusinessHours(appointmentEndTime)) {

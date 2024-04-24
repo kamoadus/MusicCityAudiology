@@ -45,8 +45,8 @@
         </div>
       </div>
       </div>
-
-      <form id="appointmentForm" action="/api/appointment" method="POST">
+      <!-- action="/api/appointment" method="POST" -->
+      <form id="appointmentForm" onsubmit="handleSubmit()" >
         <div>
             <input type="hidden" id="UserID" name="UserID">
             <label for="ApptLocation">Location:</label>
@@ -61,22 +61,22 @@
         <div>
             <label>Service Provided:</label>
             <div class="checkbox-buttons">
-                <input type="checkbox" id="service-option1" name="ApptTreatment" value="option1">
+                <input type="checkbox" id="service-option1" name="HearingAids" value="option1">
                 <label for="service-option1">Hearing Aids</label>
                 
-                <input type="checkbox" id="service-option2" name="ApptTreatment" value="option2">
+                <input type="checkbox" id="service-option2" name="EarmoldImpressions" value="option2">
                 <label for="service-option2">Earmold Impressions</label>
                 
-                <input type="checkbox" id="service-option3" name="ApptTreatment" value="option3">
+                <input type="checkbox" id="service-option3" name="CustomHearingProtection" value="option3">
                 <label for="service-option3">Custom Hearing Protection</label>
                 
-                <input type="checkbox" id="service-option4" name="ApptTreatment" value="option4">
+                <input type="checkbox" id="service-option4" name="EarCanalCleaning" value="option4">
                 <label for="service-option4">Ear Canal Cleaning</label>
                 
-                <input type="checkbox" id="service-option5" name="ApptTreatment" value="option5">
+                <input type="checkbox" id="service-option5" name="DeviceCleaning" value="option5">
                 <label for="service-option5">Device Cleaning & Troubleshooting</label>
                 
-                <input type="checkbox" id="service-option6" name="ApptTreatment" value="option6">
+                <input type="checkbox" id="service-option6" name="AudiologyConsults" value="option6">
                 <label for="service-option6">Audiology Consults</label>
             </div>
         </div>
