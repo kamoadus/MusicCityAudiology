@@ -28,7 +28,7 @@
     border-color: white;
     padding: 15px 15px;
     font-size: 20px;
-    margin-left: 10px;
+    margin-top: 10px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -94,8 +94,15 @@ input[type=text], select, textarea {
 }
 
 .datetimepicker-container {
+    overflow: hidden; 
+    width: 300px; 
+    height: 300px; 
     margin-top: 6px;
     margin-bottom: 16px;
+}
+
+.datetimepicker-container .xdsoft_datepicker {
+    overflow: hidden; 
 }
 
 button[type=submit] {
@@ -199,5 +206,5 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .top-padding{
-    padding-top: 100px;
+    padding-top: 200px;
 }

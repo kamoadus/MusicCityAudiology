@@ -11,20 +11,6 @@ async function submitForm() {
         localStorage.setItem('userId', data);
         window.location.href = './appointment.html';
     }
-
-    //  => {
-    //     if (response.ok) {
-            // alert('Login successful!');
-            // //console.log(response)
-            // //window.location.href = './appointment.html';
-        // } else {
-        //     alert('Login failed. Please try again');
-        // }
-    // })
-    // .catch(error => {
-    //     console.error('Error submitting form:', error);
-    //     alert('An error occurred while processing your request. Please try again later.');
-    // });
 }
 
 var navbar = document.getElementById("navbar");

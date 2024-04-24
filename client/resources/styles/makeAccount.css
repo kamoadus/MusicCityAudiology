@@ -29,13 +29,14 @@
     border-color: white;
     padding: 15px 15px;
     font-size: 20px;
-    margin-left: 10px;
+    margin-top: 10px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .footer {
     background-color: #1b83df;
     padding: 25px 0;
+    margin-top: 25px;
     color: white;
 }
 
@@ -165,5 +166,5 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .top-padding{
-    padding-top: 100px;
+    padding-top: 200px;
 }

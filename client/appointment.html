@@ -39,7 +39,7 @@
                  </div>
             </div>
       </nav>
-      <div class="container">
+      <div class="container top-padding">
         <div class="pageHeading">
             <font><strong>Make an Appointment</strong></font>
         </div>
@@ -49,36 +49,36 @@
       <form id="appointmentForm" action="/api/appointment" method="POST">
         <div>
             <input type="hidden" id="UserID" name="UserID">
-            <label for="location">Location:</label>
-            <select id="location" name="location">
+            <label for="ApptLocation">Location:</label>
+            <select id="ApptLocation" name="ApptLocation">
                 <option value="">Select Location</option>
                 <option value="option1">Option 1</option>
                 <option value="option2">Option 2</option>
                 <option value="other">Other</option>
             </select>
-            <input type="text" id="otherLocationInput" name="otherLocation" style="display: none;" placeholder="Other location">
+            <input type="text" id="otherLocationInput" name="OtherLocation" style="display: none;" placeholder="Other location">
         </div>
         <div>
             <label>Service Provided:</label>
-                <div class="checkbox-buttons">
-                    <input type="checkbox" id="service-option1" name="service-option1" value="option1">
-                    <label for="service-option1">Hearing Aids</label>
-                    
-                    <input type="checkbox" id="service-option2" name="service-option2" value="option2">
-                    <label for="service-option2">Earmold Impressions</label>
-                    
-                    <input type="checkbox" id="service-option3" name="service-option3" value="option3">
-                    <label for="service-option3">Custom Hearing Protection</label>
-                    
-                    <input type="checkbox" id="service-option4" name="service-option4" value="option4">
-                    <label for="service-option4">Ear Canal Cleaning</label>
-                    
-                    <input type="checkbox" id="service-option5" name="service-option5" value="option5">
-                    <label for="service-option5">Device Cleaning & Troubleshooting</label>
-                    
-                    <input type="checkbox" id="service-option6" name="service-option6" value="option6">
-                    <label for="service-option6">Audiology Consults</label>
-                </div>
+            <div class="checkbox-buttons">
+                <input type="checkbox" id="service-option1" name="ApptTreatment" value="option1">
+                <label for="service-option1">Hearing Aids</label>
+                
+                <input type="checkbox" id="service-option2" name="ApptTreatment" value="option2">
+                <label for="service-option2">Earmold Impressions</label>
+                
+                <input type="checkbox" id="service-option3" name="ApptTreatment" value="option3">
+                <label for="service-option3">Custom Hearing Protection</label>
+                
+                <input type="checkbox" id="service-option4" name="ApptTreatment" value="option4">
+                <label for="service-option4">Ear Canal Cleaning</label>
+                
+                <input type="checkbox" id="service-option5" name="ApptTreatment" value="option5">
+                <label for="service-option5">Device Cleaning & Troubleshooting</label>
+                
+                <input type="checkbox" id="service-option6" name="ApptTreatment" value="option6">
+                <label for="service-option6">Audiology Consults</label>
+            </div>
         </div>
         <div>
             <h3>Appointment Date:</h3>
@@ -90,17 +90,17 @@
         </div>
         <div>
             <label for="payment">Payment Method:</label>
-            <select id="payment" name="payment">
+            <select id="payment" name="PayMethod">
                 <option value="">Select Payment Method</option>
                 <option value="option1">Wire Transfer</option>
                 <option value="option2">Electronic Pay</option>
                 <option value="other">Other</option>
             </select>
-            <input type="text" id="otherPaymentInput" name="otherPayment" style="display: none;" placeholder="Other payment method">
+            <input type="text" id="otherPaymentInput" name="OtherPayment" style="display: none;" placeholder="Other payment method">
         </div>
+        <div id="appointmentEndTime"></div>
         <button type="submit">Submit</button>
     </form>
-
     
 
     

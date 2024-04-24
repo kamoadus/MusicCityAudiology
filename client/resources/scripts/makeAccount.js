@@ -1,30 +1,13 @@
-function redirectToLoginPage() {
-    event.preventDefault();
-
-    var formData = {
-        Username: document.getElementById("Username").value, // Make sure the ID matches the HTML element
-        Password: document.getElementById("Password").value, // Make sure the ID matches the HTML element
-        Fname: document.getElementById("Fname").value, // Make sure the ID matches the HTML element
-        Lname: document.getElementById("Lname").value // Make sure the ID matches the HTML element
-    };
-
-    fetch('http://localhost:5029/api/user', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
-    })
-    .then(response => {
-        if (response.ok) {
-            window.location.href = './login.html';
-        } else {
-            console.error('Error submitting form:', response.statusText);
-        }
-    })
-    .catch(error => {
-        console.error('Error submitting form:', error);
-    });
+function checkPasswordsMatch() {
+    var password = document.getElementById("Password").value;
+    var confirmPassword = document.getElementById("confirmPassword").value;
+    var passwordMatchMessage = document.getElementById("passwordMatchMessage");
+    
+    if (password !== confirmPassword) {
+        passwordMatchMessage.innerHTML = "Passwords do not match";
+    } else {
+        passwordMatchMessage.innerHTML = "";
+    }
 }
 
 var navbar = document.getElementById("navbar");
@@ -50,3 +33,33 @@ var navbar = document.getElementById("navbar");
         }
         lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
     }, false);
+
+function redirectToLoginPage() {
+    event.preventDefault();
+
+    var formData = {
+        Username: document.getElementById("Username").value, 
+        Password: document.getElementById("Password").value,
+        Fname: document.getElementById("Fname").value, 
+        Lname: document.getElementById("Lname").value 
+    };
+
+    fetch('http://localhost:5029/api/user', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+    })
+    .then(response => {
+        if (response.ok) {
+            window.location.href = './login.html';
+        } else {
+            console.error('Error submitting form:', response.statusText);
+        }
+    })
+    .catch(error => {
+        console.error('Error submitting form:', error);
+    });
+}
+

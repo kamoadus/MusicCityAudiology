@@ -13,6 +13,7 @@ namespace api.models
         public string ApptTreatment { get; set;}
         public DateTime ApptDate { get; set; }
         public bool Approved {get; set;}
+        public int ApptEndDate { get; set; }
  
         public static List<Appointment> GetAllAppointments()
         {
@@ -26,7 +27,7 @@ namespace api.models
             MySqlDataReader rdr = cmd.ExecuteReader();
             while (rdr.Read())
             {
-                appointment.Add(new Appointment(){ApptID=rdr.GetInt32(0), UserID=rdr.GetInt32(1), PayMethod=rdr.GetString(2), ApptLocation=rdr.GetString(3), ApptTreatment=rdr.GetString(4), ApptDate= rdr.GetDateTime(5), Approved=rdr.GetBoolean(6)});
+                appointment.Add(new Appointment(){ApptID=rdr.GetInt32(0), UserID=rdr.GetInt32(1), PayMethod=rdr.GetString(2), ApptLocation=rdr.GetString(3), ApptTreatment=rdr.GetString(4), ApptDate= rdr.GetDateTime(5), Approved=rdr.GetBoolean(6), ApptEndDate=rdr.GetInt32(7)});
             }
             con.Close();
             return appointment;
@@ -37,7 +38,7 @@ namespace api.models
             Database database = new Database();
             using var con = database.GetPublicConnection();
  
-            string stm = @"Insert into Appointment (UserID, PayMethod, ApptLocation, ApptTreatment, ApptDate, Approved) VALUES(@UserID, @PayMethod, @ApptLocation, @ApptTreatment, @ApptDate, @Approved)";
+            string stm = @"Insert into Appointment (UserID, PayMethod, ApptLocation, ApptTreatment, ApptDate, Approved, ApptEndDate) VALUES(@UserID, @PayMethod, @ApptLocation, @ApptTreatment, @ApptDate, @Approved, @ApptEndDate)";
             MySqlCommand cmd = new MySqlCommand(stm, con);
             con.Open();
             cmd.Parameters.AddWithValue("@UserID", appointment.UserID);
@@ -46,6 +47,7 @@ namespace api.models
             cmd.Parameters.AddWithValue("@ApptTreatment", appointment.ApptTreatment);
             cmd.Parameters.AddWithValue("@ApptDate", appointment.ApptDate);
             cmd.Parameters.AddWithValue("@Approved", appointment.Approved);
+            cmd.Parameters.AddWithValue("@ApptEndDate", appointment.ApptEndDate);
  
             cmd.Prepare();
             cmd.ExecuteNonQuery();
