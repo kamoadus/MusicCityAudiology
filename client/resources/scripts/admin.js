@@ -24,61 +24,14 @@ var navbar = document.getElementById("navbar");
 
 
     function fetchPendingAppointments() {
-        fetch('http://localhost:5029/api/admin/appointments')
+        fetch('http://localhost:5029/api/appointments') 
             .then(response => response.json())
             .then(appointments => {
                 const appointmentsBody = document.getElementById('pending-appointments-body');
-                appointmentsBody.innerHTML = '';
+                appointmentsBody.innerHTML = ''; 
 
                 appointments.forEach(appointment => {
-                    const row = document.createElement('tr');
-                    row.innerHTML = `
-                        <td>${appointment.name}</td>
-                        <td>${appointment.email}</td>
-                        <td>${appointment.date}</td>
-                        <td>
-                            <button onclick="acceptAppointment('${appointment.id}')">Accept</button>
-                            <button onclick="denyAppointment('${appointment.id}')">Deny</button>
-                        </td>
-                    `;
-                    appointmentsBody.appendChild(row);
-                });
-            })
-            .catch(error => console.error('Error fetching pending appointments:', error));
-    }
-    function acceptAppointment(appointmentId) {
-        handleAdminAction(appointmentId, 'accept');
-    }
-    function denyAppointment(appointmentId) {
-        handleAdminAction(appointmentId, 'deny');
-    }
-    function handleAdminAction(appointmentId, action) {
-        fetch(`http://localhost:5029/api/admin/appointments/${appointmentId}`, {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ action })
-        })
-        .then(response => {
-            if (response.ok) {
-                fetchPendingAppointments(); 
-            } else {
-                throw new Error('Failed to update appointment status');
-            }
-        })
-        .catch(error => console.error('Error updating appointment status:', error));
-    }
-    fetchPendingAppointments();
-
-        function fetchPendingAppointments() {
-            fetch('http://localhost:5029/api/admin/appointments')
-                .then(response => response.json())
-                .then(appointments => {
-                    const appointmentsBody = document.getElementById('pending-appointments-body');
-                    appointmentsBody.innerHTML = ''; 
-
-                    appointments.forEach(appointment => {
+                    if (appointment.status === 'pending') { 
                         const row = document.createElement('tr');
                         row.innerHTML = `
                             <td>${appointment.name}</td>
@@ -90,34 +43,33 @@ var navbar = document.getElementById("navbar");
                             </td>
                         `;
                         appointmentsBody.appendChild(row);
-                    });
-                })
-                .catch(error => console.error('Error fetching pending appointments:', error));
-        }
-
-        function acceptAppointment(appointmentId) {
-            handleAdminAction(appointmentId, 'accept');
-        }
-
-        function denyAppointment(appointmentId) {
-            handleAdminAction(appointmentId, 'deny');
-        }
-
-        function handleAdminAction(appointmentId, action) {
-            fetch(`http://localhost:5029/api/admin/appointments/${appointmentId}`, {
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ action })
+                    }
+                });
             })
-            .then(response => {
-                if (response.ok) {
-                    fetchPendingAppointments(); 
-                } else {
-                    throw new Error('Failed to update appointment status');
-                }
-            })
-            .catch(error => console.error('Error updating appointment status:', error));
-        }
-        fetchPendingAppointments();
+            .catch(error => console.error('Error fetching pending appointments:', error));
+    }
+    function acceptAppointment(appointmentId) {
+        handleAppointmentStatus(appointmentId, 'accepted');
+    }
+    function denyAppointment(appointmentId) {
+        handleAppointmentStatus(appointmentId, 'denied');
+    }
+    function handleAppointmentStatus(appointmentId, status) {
+        fetch(`http://localhost:5029/api/appointments/${appointmentId}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ status })
+        })
+        .then(response => {
+            if (response.ok) {
+                fetchPendingAppointments(); 
+            } else {
+                throw new Error('Failed to update appointment status');
+            }
+        })
+        .catch(error => console.error('Error updating appointment status:', error));
+    }
+
+    fetchPendingAppointments();

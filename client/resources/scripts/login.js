@@ -1,5 +1,4 @@
 async function submitForm() {
-    console.log('is this even running')
     const username = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 

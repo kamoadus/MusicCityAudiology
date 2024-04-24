@@ -49,7 +49,7 @@ var navbar = document.getElementById("navbar");
         lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
     }, false);
 
-    function handleSubmit(event) {
+    function handleSubmit() {
         event.preventDefault();
     
         var formData = {
@@ -68,15 +68,15 @@ var navbar = document.getElementById("navbar");
     
         if (!isBusinessHours(appointmentEndTime)) {
             alert("Appointment would end after business hours (9:00 AM - 5:00 PM). Please select a different time.");
-            return; // Prevent form submission
+            return; 
         }
     
-        fetch('http://localhost:5029/api/appointment', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(formData)
+        fetch('http://localhost:5029/api/user', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
             })
             .then(response => {
                 if (response.ok) {
