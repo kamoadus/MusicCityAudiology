@@ -19,13 +19,6 @@ namespace api.Controllers
             return UserInfo.GetUserInfo(username, password);
         }
  
-        // GET: api/user/5
-        // [HttpGet("{id}", Name = "Get")]
-        // public string Get(int id)
-        // {
-        //     return "value";
-        // }
- 
         // POST: api/user
         [HttpPost]
         public void Post([FromBody] UserInfo user_Info)

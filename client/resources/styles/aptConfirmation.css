@@ -1,20 +1,25 @@
 .navbar{
     padding-top: 50px;
     padding-bottom: 50px;
-     background-color: #1b83df;
-     color: white;
+    background-color: #1b83df;
+    width: 100%; 
+    position: fixed; 
+    top: 0; 
+    z-index: 1000; 
  }
 
- .pageTitle{
+.pageTitle{
     color: white;
     font-style: initial;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.navbar-nav .nav-link{
-    color: white !important;
-    font-size: 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.navbar-collapse .navbar-nav .nav-link {
+    color: white; 
+}
+
+.navbar-nav .nav-link:not(.aptButton) {
+    color: white; 
 }
 
 .aptButton {
@@ -66,13 +71,9 @@
 
 .container{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-body {
-    overflow-x: hidden; 
-    overflow-y: auto; 
 }
 
 body::-webkit-scrollbar {
@@ -101,10 +102,3 @@ body::-webkit-scrollbar-thumb:hover {
     padding-top: 200px;
 }
 
-.pageHeading {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: black;
-    font-size: 60px;
-    text-align: center;
-    padding-bottom: 100px;
-}

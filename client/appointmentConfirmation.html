@@ -3,13 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Make An Appointment</title>
+    <title>Appointment Conformation</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <link  rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css"/>
-    <link rel="stylesheet" href="./resources/styles/appointment.css">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js"></script>
+    <link rel="stylesheet" href="./resources/styles/aptConfirmation.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-md navbar-light bg-primary fixed-top" id="navbar">
@@ -40,71 +36,13 @@
             </div>
       </nav>
       <div class="container top-padding">
-        <div class="pageHeading">
-            <font><strong>Make an Appointment</strong></font>
+    <h2>Thank you for your appointment request!</h2>
+    <h6>We have received your appointment information and will confirm your appointment shortly.</h6>
         </div>
-      </div>
-      </div>
-      <form id="appointmentForm" onsubmit="handleSubmit(event)">
-        <div>
-            <input type="hidden" id="UserID" name="UserID">
-            <label for="ApptLocation">Location:</label>
-            <select id="ApptLocation" name="ApptLocation">
-                <option value="">Select Location</option>
-                <option value="option1">Option 1</option>
-                <option value="option2">Option 2</option>
-                <option value="other">Other</option>
-            </select>
-            <input type="text" id="otherLocationInput" name="OtherLocation" style="display: none;" placeholder="Other location">
+
+        <div class="text-center mt-5"> 
+            <button class="btn btn-primary btn-lg" onclick="window.location.href='./homePage.html'">Return to Home Page</button>
         </div>
-        <div>
-            <label>Service Provided:</label>
-            <div class="checkbox-buttons">
-                <input type="checkbox" id="service-option1" name="HearingAids" value="option1">
-                <label for="service-option1">Hearing Aids</label>
-                
-                <input type="checkbox" id="service-option2" name="EarmoldImpressions" value="option2">
-                <label for="service-option2">Earmold Impressions</label>
-                
-                <input type="checkbox" id="service-option3" name="CustomHearingProtection" value="option3">
-                <label for="service-option3">Custom Hearing Protection</label>
-                
-                <input type="checkbox" id="service-option4" name="EarCanalCleaning" value="option4">
-                <label for="service-option4">Ear Canal Cleaning</label>
-                
-                <input type="checkbox" id="service-option5" name="DeviceCleaning" value="option5">
-                <label for="service-option5">Device Cleaning & Troubleshooting</label>
-                
-                <input type="checkbox" id="service-option6" name="AudiologyConsults" value="option6">
-                <label for="service-option6">Audiology Consults</label>
-            </div>
-        </div>
-        <div>
-            <h3>Appointment Date:</h3>
-            <div id="inlineDate"></div>
-        </div>
-        <div>
-            <h3>Appointment Time:</h3>
-            <div id="inlineTime"></div>
-        </div>
-        <div>
-            <label for="payment">Payment Method:</label>
-            <select id="payment" name="PayMethod">
-                <option value="">Select Payment Method</option>
-                <option value="option1">Wire Transfer</option>
-                <option value="option2">Electronic Pay</option>
-                <option value="other">Other</option>
-            </select>
-            <input type="text" id="otherPaymentInput" name="OtherPayment" style="display: none;" placeholder="Other payment method">
-        </div>
-        <div id="appointmentEndTime"></div>
-        <button type="submit">Submit</button>
-    </form>
-    
-    <div id="successAlert" class="alert alert-success" style="display: none;">
-        Appointment submitted successfully! You will receive a confirmation shortly.
-    </div>
-    
 
     <footer class="footer bg-primary">
         <div class="container-fluid">
@@ -128,6 +66,6 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js"></script>
-    <script src="./resources/scripts/appointment.js"></script>
+    <script src="./resources/scripts/appointmentConfirmation.js"></script>
 </body>
 </html>
